@@ -8738,7 +8738,7 @@
             map = new Map(document.getElementById("map"), {
                 zoom: 14.6,
                 center: position,
-                mapId: "DEMO_MAP_ID"
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             });
             new google.maps.Marker({
                 map,
@@ -8749,6 +8749,72 @@
                 position: position2,
                 map,
                 title: "Shop"
+            });
+            const newStyle = [ {
+                featureType: "all",
+                elementType: "labels.text.fill",
+                stylers: [ {
+                    color: "#b5b5b5"
+                }, {
+                    visibility: "on"
+                }, {
+                    saturation: 0
+                } ]
+            }, {
+                featureType: "landscape",
+                elementType: "geometry",
+                stylers: [ {
+                    color: "#f7f5f7"
+                }, {
+                    visibility: "on"
+                }, {
+                    saturation: 0
+                } ]
+            }, {
+                featureType: "landscape.man_made",
+                elementType: "geometry",
+                stylers: [ {
+                    color: "#f7f5f7"
+                }, {
+                    visibility: "on"
+                }, {
+                    saturation: 0
+                } ]
+            }, {
+                featureType: "landscape.natural",
+                elementType: "geometry",
+                stylers: [ {
+                    color: "#e0e0e0"
+                }, {
+                    visibility: "on"
+                }, {
+                    saturation: 0
+                } ]
+            }, {
+                featureType: "all",
+                elementType: "labels.icon",
+                stylers: [ {
+                    color: "#9d9b9b"
+                }, {
+                    visibility: "on"
+                }, {
+                    saturation: 0
+                } ]
+            }, {
+                featureType: "all",
+                elementType: "labels.icon",
+                stylers: [ {
+                    visibility: "on"
+                } ]
+            }, {
+                featureType: "transit.station",
+                elementType: "labels.icon",
+                stylers: [ {
+                    visibility: "on"
+                } ]
+            } ];
+            map.setOptions({
+                styles: newStyle
             });
         }
         initMap();
