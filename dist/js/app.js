@@ -8362,7 +8362,7 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
+                        slidesPerView: 1.1,
                         spaceBetween: 10,
                         autoHeight: true
                     },
@@ -8391,7 +8391,7 @@
                 },
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
+                        slidesPerView: 1.1,
                         spaceBetween: 10,
                         autoHeight: true
                     },
@@ -8663,10 +8663,9 @@
             const playButton = e.target.closest(".game__play");
             if (playButton) {
                 const currentSlide = playButton.closest(".game__slide");
-                const videoCover = currentSlide.querySelector(".game__image-ibg");
                 const video = currentSlide.querySelector("iframe");
                 video.src += "?autoplay=1";
-                videoCover.classList.add("hide");
+                currentSlide.classList.add("hide");
             }
         }));
         const cart = document.querySelector(".cart");
@@ -8736,7 +8735,7 @@
             const {Map} = await google.maps.importLibrary("maps");
             const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
             map = new Map(document.getElementById("map"), {
-                zoom: 14.6,
+                zoom: 14,
                 center: position,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
