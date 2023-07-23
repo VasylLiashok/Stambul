@@ -8726,22 +8726,29 @@
         let map;
         async function initMap() {
             const position = {
-                lat: 46.4782336,
-                lng: 30.7298306
+                lat: 46.4862095,
+                lng: 30.7290464
+            };
+            const position2 = {
+                lat: 46.47829268469182,
+                lng: 30.730195377958257
             };
             const {Map} = await google.maps.importLibrary("maps");
             const {AdvancedMarkerElement} = await google.maps.importLibrary("marker");
             map = new Map(document.getElementById("map"), {
-                zoom: 16,
+                zoom: 14.6,
                 center: position,
                 mapId: "DEMO_MAP_ID"
             });
-            const image = "../img/marker.svg";
             new google.maps.Marker({
                 map,
                 position,
-                title: "Shop",
-                icon: image
+                title: "Shop"
+            });
+            new google.maps.Marker({
+                position: position2,
+                map,
+                title: "Shop"
             });
         }
         initMap();

@@ -667,6 +667,10 @@ textarea.input {
   font-weight: 600;
 }
 
+.fw_700 {
+  font-weight: 700;
+}
+
 .yellow-block {
   border-radius: 1.25rem;
   line-height: 1.125;
@@ -1517,11 +1521,8 @@ textarea.input {
   position: relative;
 }
 
-.awards__slider {
-  padding-bottom: 1.625rem;
-}
-
 .game__slider {
+  padding-bottom: 1.625rem;
   position: relative;
 }
 
@@ -1580,7 +1581,9 @@ textarea.input {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #e0d8d2;
+  background: rgba(255, 255, 255, 0.43);
+  -webkit-backdrop-filter: blur(14.5px);
+          backdrop-filter: blur(14.5px);
   z-index: 1;
   border-radius: 50%;
   display: -webkit-box;
