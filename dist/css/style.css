@@ -1672,11 +1672,15 @@ textarea.input {
       -ms-transform: translate(-50%, 0px);
           transform: translate(-50%, 0px);
   margin: 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .game__text {
   padding-left: 1.5rem;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .game__text::before {
@@ -1825,6 +1829,10 @@ textarea.input {
 
 .item-preorder__media {
   position: relative;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .item-preorder__image-ibg {
@@ -4737,6 +4745,10 @@ textarea.input {
     color: #a10e04;
   }
 
+  .game__slide:hover .game__text {
+    color: #a10e04;
+  }
+
   .game__play:hover {
     -webkit-animation: pulse 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
             animation: pulse 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
@@ -4759,6 +4771,12 @@ textarea.input {
   .swiper-button:hover {
     -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.589));
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.589));
+  }
+
+  .item-preorder__media:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
   }
 
   .rules__goal-download:hover {
