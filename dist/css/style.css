@@ -1664,6 +1664,16 @@ textarea.input {
   visibility: hidden;
 }
 
+.review .game__content {
+  width: auto;
+  max-width: calc(100% - 3rem);
+  left: 50%;
+  -webkit-transform: translate(-50%, 0px);
+      -ms-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  margin: 0;
+}
+
 .game__text {
   padding-left: 1.5rem;
   position: relative;
@@ -2761,7 +2771,6 @@ textarea.input {
 
   .main__wide {
     width: 120%;
-    padding: 1.5rem;
   }
 
   .main__wide p {
@@ -3208,15 +3217,15 @@ textarea.input {
 
 @media (max-width: 83.75em) {
   .cart {
-    -webkit-transform: translate(100%, 0px);
-        -ms-transform: translate(100%, 0px);
-            transform: translate(100%, 0px);
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 
   .arrow-up {
-    -webkit-transform: translate(100%, 0px);
-        -ms-transform: translate(100%, 0px);
-            transform: translate(100%, 0px);
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
@@ -3237,10 +3246,6 @@ textarea.input {
 @media (max-width: 75.625em) {
   .header__menu {
     padding: 1.5rem 1.375rem;
-  }
-
-  .game__title {
-    padding-left: 1.5rem;
   }
 
   .game__content .yellow-block__wrapper {
@@ -4694,6 +4699,12 @@ textarea.input {
 
   .game__video {
     padding-bottom: 73.6842105263%;
+  }
+}
+
+@media (max-width: 75.625em) and (min-width: 47.99875em) {
+  .game__title {
+    padding-left: 1.5rem;
   }
 }
 
